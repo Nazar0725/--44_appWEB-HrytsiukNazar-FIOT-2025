@@ -1,0 +1,190 @@
+/* стилізація header */
+/* Скидання стандартних відступів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #fff7e6;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f2c94c;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+  
+  /* Стиль навігації */
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #e63946;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #f2c94c;
+    border-color: #f2c94c;
+    color: #333;
+  }
+  
+  /* Бургер-меню */
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px;
+  }
+  
+  /* Назва сайту під меню */
+  .site-title {
+    text-align: center;
+    color: #d62828;
+    font-size: 2.5em;
+    margin-top: 10px;
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 768px) {
+    .nav-links ul {
+      flex-direction: column;
+      background-color: #fff7e6;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      display: none;
+      border: 1px solid #f2c94c;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  
+    .nav-links.active ul {
+      display: flex;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  }
+  
+/* стилізація main */
+
+
+main {
+    padding: 40px 20px; /* Відступи всередині основного блоку */
+    background-color: #fffaf0; /* М’який теплий фон, як у фастфуді */
+    color: #333; /* Основний колір тексту */
+    font-family: Arial, sans-serif; /* Простий сучасний шрифт */
+    line-height: 1.6; /* Збільшена висота рядка для зручності читання */
+  }
+  
+  /* Вирівнюємо кожен блок у main */
+  main div {
+    margin-bottom: 40px; /* Відступ між секціями */
+    background: #fff; /* Білий фон для контрасту */
+    border: 2px solid #f2c94c; /* Жовта рамка — у стилі бренду */
+    border-radius: 12px; /* Округлені кути */
+    padding: 20px; /* Відступи всередині блоку */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Легка тінь для об’єму */
+  }
+  
+  /* Заголовки різного рівня */
+  main h2, main h3, main h4, main h5 {
+    color: #e63946; /* Червоний — основний акцент кольору */
+    margin-bottom: 10px; /* Відступ під заголовком */
+  }
+  
+  /* Текст абзаців */
+  main p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Список переваг */
+  ol {
+    padding-left: 20px; /* Відступ для списку */
+  }
+  
+  ol li {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d62828; /* Теплий червоний для маркерів */
+  }
+  
+  /* Таблиця  */
+  table {
+    width: 100%; /* Таблиця на всю ширину блоку */
+    border-collapse: collapse; /* Об’єднуємо межі */
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 2px solid #f2c94c; /* Тонка рамка у фірмовому кольорі */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2c94c; /* Жовтий фон для заголовків */
+    color: #333;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fff8dc; /* Світлий колір для парних рядків */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff7e6;
+    color: #d62828;
+    font-weight: bold;
+    border-top: 2px solid #f2c94c;
+  }
+  
+  /* Посилання на сторінку опису */
+  /*
+  a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #333;
+    text-decoration: underline;
+  }
+  */
