@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <link rel="stylesheet" href="css/style.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eat Fast</title>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eat Fast</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <div class="navbar">
       <div class="logo">
-        <img src="assets/Eat Fast logo.png" alt="logo">
+        <img src="assets/Eat Fast logo.png" alt="logo" />
       </div>
 
       <nav class="nav-links">
         <ul>
-          <li><a href="#home">Раціон</a></li>
+          <li><a href="rations.html">Раціон</a></li>
           <li><a href="#contacts">Контакти</a></li>
           <li><a href="#reviews">Відгуки</a></li>
-          <li><a href="#admin">Адміністратор</a></li>
+          <li><a href="#" id="adminLoginLink">Адміністратор</a></li>
         </ul>
       </nav>
 
-      <div class="burger">
+      <div class="burger" aria-label="burger menu" role="button">
         <div></div>
         <div></div>
         <div></div>
@@ -33,80 +30,60 @@
     </div>
 
     <h1 class="site-title">Eat Fast</h1>
-
+    <div class="header-actions">
+      <button id="logoutAdminBtn" class="admin-btn logout-btn" style="display:none;">Вийти з режиму адміністратора</button>
+    </div>
   </header>
-  
 
-    <main> 
-    
-      <section id="about">
-
-        <div> 
+  <main>
+    <!-- 1 -->
+    <section class="info-box">
       <h2>"Eat Fast" — це зручний веб-застосунок для тих, хто цінує свій час і піклується про здоров’я."</h2>
       <p>Ми створили цей сервіс, щоб кожен міг швидко замовити готовий збалансований раціон харчування, не витрачаючи години на планування та приготування страв.</p>
-    </div>
+    </section>
 
-    <div>
+    <!-- 2 -->
+    <section class="info-box">
       <h3>Наша Мета</h3>
       <p>Наша головна мета — зробити корисне харчування доступним і простим для всіх. Незалежно від того, чи ти активно займаєшся спортом, дотримуєшся дієти, чи просто хочеш харчуватись правильно — у нас знайдеться раціон, який підходить саме тобі.</p>
-      <p>Ми приймаємо замовлення 24/7, тому звертайся у будь який час!</p>
-    </div>
+      <p>Ми приймаємо замовлення 24/7, тому звертайся у будь-який час!</p>
+    </section>
 
-        <div>
-        <h4>Наші переваги</h4>
-        <ol>
-            <li>Швидкість</li>
-            <li>Зручність</li>
-            <li>Якість</li>
-            <li>Надійність</li>
-            <li>Економія</li>
-        </ol>
-    </div>
+    <!-- 3 -->
+    <section class="info-box">
+      <h3>Наші переваги</h3>
+      <ol>
+        <li>Швидкість</li>
+        <li>Зручність</li>
+        <li>Якість</li>
+        <li>Надійність</li>
+        <li>Економія</li>
+      </ol>
+    </section>
 
-    <div> 
-      <h5>Ми пропонуємо</h5>
-      <table> 
-        <tr>
-            <th>Раціон</th>
-            <th>Перевага</th>
-        </tr>
-        <tr>
-            <td>Для вегетаріанців</td>
-            <td>Без м’яса, з рослинним білком</td>
-        </tr>
-
-        <tr>
-            <td>Для спортсменів</td>
-            <td>Високий вміст білка, енергетична цінність</td>
-        </tr>
-
-        <tr>
-            <td>Для схуднення</td>
-            <td>Знижена калорійність, контроль порцій</td>
-        </tr>
-
-        <tr>
-            <td>Збалансовані</td>
-            <td>Ідеальне співвідношення БЖВ</td>
-        </tr>
-
-        <tr>
-            <td>Швидкі варіанти</td>
-            <td>Готові до вживання, зручно брати з собою</td>
-        </tr>
-        </table>
-    </div>
-
-  </section>
+    <!-- 4 -->
+    <section class="info-box">
+      <h3>Ми пропонуємо</h3>
+      <table class="offer-table">
+        <thead>
+          <tr><th>Раціон</th><th>Перевага</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Для вегетаріанців</td><td>Без м’яса, з рослинним білком</td></tr>
+          <tr><td>Для спортсменів</td><td>Високий вміст білка, енергетична цінність</td></tr>
+          <tr><td>Для схуднення</td><td>Знижена калорійність, контроль порцій</td></tr>
+          <tr><td>Збалансовані</td><td>Ідеальне співвідношення БЖВ</td></tr>
+          <tr><td>Швидкі варіанти</td><td>Готові до вживання, зручно брати з собою</td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
 
-      <footer>
-        <p>"Eat Fast" - Ваш вибір!</p>
-        <p>Для зв'язку з нами перейдіть у розділ "Контакти"</p>
-      </footer>
+  <footer>
+    <p>"Eat Fast" - Ваш вибір!</p>
+    <p>Для зв'язку з нами перейдіть у розділ "Контакти"</p>
+  </footer>
 
-      <!--  <a href="index_description.html" target="_blank">Сторінка опису проєкту</a> -->
-      
-      <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

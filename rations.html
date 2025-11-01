@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Раціони — Eat Fast</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="assets/Eat Fast logo.png" alt="logo" />
+      </div>
+
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="rations.html" class="active">Раціон</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+          <li><a href="#reviews">Відгуки</a></li>
+          <li><a href="#" id="adminLoginLink">Адміністратор</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger" aria-label="burger menu" role="button">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="addRationBtn" class="admin-btn" style="display:none;">Додати картку</button>
+      <button id="logoutAdminBtn" class="admin-btn logout-btn" style="display:none;">Вийти з режиму адміністратора</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="site-title">Наші Раціони</h1>
+
+    <!-- Категорії -->
+    <section class="categories">
+      <button class="category-btn">Дієтичні</button>
+      <button class="category-btn">Спорт</button>
+      <button class="category-btn">Баланс</button>
+      <button class="category-btn">Рибний</button>
+    </section>
+
+    <!-- Акційні раціони -->
+    <section class="rations">
+      <h2 class="section-title">Акційні раціони</h2>
+
+      <div class="rations-grid">
+        <div class="ration-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQo0-X7JI8b9OV8eDVv4KyfNveu86f2q62g&s" alt="Дієтичний раціон" />
+          <h3>Ранковий</h3>
+          <h4 class="price">160 грн</h4>
+          <p class="desc">Вівсяна каша з горіхами та родзинками. Ідеально підходить для сніданку, дає енергію на весь ранок.
+            <br>Порція: 250 г
+            <br>Калорійність: 280 ккал
+            <br>БЖВ: Білки – 8 г, Жири – 10 г, Вуглеводи – 42 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+        <div class="ration-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7OSklfwPuomf0nXVSADOOfBrOB_Wc2Z-kQ&s" alt="Спортивний раціон" />
+          <h3>Щоденний</h3>
+          <h4 class="price">260 грн</h4>
+          <p class="desc">Гречка з маслом та свіжою зеленню. Класичний щоденний гарнір, легкий та ситний.
+            <br>Порція: 200 г
+            <br>Калорійність: 220 ккал
+            <br>БЖВ: Білки – 6 г, Жири – 8 г, Вуглеводи – 34 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+        <div class="ration-card">
+          <img src="https://via.placeholder.com/600x400?text=%D0%9D%D0%B5%D0%B0%D0%B2%D0%B5%D0%BB%D0%B8%D0%B2%D0%B0%D0%BD%D0%B5" alt="Національний" />
+          <h3>Національний</h3>
+          <h4 class="price">320 грн</h4>
+          <p class="desc">Борщ з пампушками та сметаною. Традиційна українська страва з насиченим смаком.
+            <br>Порція: 350 г
+            <br>Калорійність: 330 ккал
+            <br>БЖВ: Білки – 12 г, Жири – 15 г, Вуглеводи – 40 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+        <div class="ration-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKTaRT_yhmutuZHWtpw4CEytGe-XktfjEkdA&s" alt="Максимум калорій" />
+          <h3>Максимум калорій</h3>
+          <h4 class="price">280 грн</h4>
+          <p class="desc">Паста з соусом та м’ясом. Висококалорійний раціон для активного дня або після тренувань.
+            <br>Порція: 300 г
+            <br>Калорійність: 480 ккал
+            <br>БЖВ: Білки – 18 г, Жири – 20 г, Вуглеводи – 60 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+        <div class="ration-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3iyzKl7GYIyHr0YBMYaRhxsfiXre3l_vbg&s" alt="Вечірній" />
+          <h3>Вечірній</h3>
+          <h4 class="price">300 грн</h4>
+          <p class="desc">Брускети з овочами та авокадо. Легкий вечерній перекус, багатий на вітаміни та корисні жири.
+            <br>Порція: 150 г
+            <br>Калорійність: 210 ккал
+            <br>БЖВ: Білки – 5 г, Жири – 12 г, Вуглеводи – 20 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+        <div class="ration-card">
+          <img src="https://via.placeholder.com/600x400?text=Fish+Meal" alt="Фіш-міл" />
+          <h3>Фіш-міл</h3>
+          <h4 class="price">350 грн</h4>
+          <p class="desc">Запечена риба з овочами. Багато білка та омега-3 жирних кислот для здоров’я серця.
+            <br>Порція: 250 г
+            <br>Калорійність: 350 ккал
+            <br>БЖУ: Білки – 28 г, Жири – 18 г, Вуглеводи – 10 г</p>
+          <div class="card-controls">
+            <button class="admin-btn edit-btn" style="display:none;">Редагувати</button>
+            <button class="admin-btn delete-btn" style="display:none;">Видалити</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // ✅ Фільтрація
+    const buttons = document.querySelectorAll('.category');
+    const cards = document.querySelectorAll('.card');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const type = btn.dataset.type;
+        cards.forEach(card => {
+          card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // ✅ Показ опису тільки для однієї картки
+    cards.forEach(card => {
+      const desc = card.querySelector('.desc');
+      desc.style.display = 'none';
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.querySelector('.desc').style.display = 'none');
+        desc.style.display = 'block';
+      });
+    });
+  </script>
+
+  <footer>
+    <p>"Eat Fast" — Ваш вибір!</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

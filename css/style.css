@@ -1,190 +1,309 @@
-/* стилізація header */
-/* Скидання стандартних відступів */
+/* ================= Header & Reset ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    background-color: #fff7e6;
-    padding: 10px 20px;
-    border-bottom: 2px solid #f2c94c;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 70px;
-    height: auto;
-  }
-  
-  /* Стиль навігації */
-  .nav-links ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #cd1c1c;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 8px 12px;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-  
-  .nav-links a:hover {
-    background-color: #f2c94c;
-    border-color: #f2c94c;
-    color: #333;
-  }
-  
-  /* Бургер-меню */
-  .burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px;
-  }
-  
-  /* Назва сайту під меню */
-  .site-title {
-    text-align: center;
-    color: #d62828;
-    font-size: 2.5em;
-    margin-top: 10px;
-  }
-  
-  /* Адаптивність */
-  @media (max-width: 768px) {
-    .nav-links ul {
-      flex-direction: column;
-      background-color: #fff7e6;
-      position: absolute ;
-      top: 70px;
-      right: 0;
-      width: 200px;
-      display: none;
-      border: 1px solid #f2c94c;
-      border-radius: 10px;
-      padding: 10px;
-    }
-  
-    .nav-links.active ul {
-      display: flex;
-    }
-  
-    .burger {
-      display: flex;
-    }
-  }
-  
-/* стилізація main */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root{
+  --accent:#f2c94c;
+  --accent-dark:#e63946;
+  --bg:#fff7e6;
+  --muted:#666;
+  --red:#d62828;
+  --card-shadow: rgba(0,0,0,0.08);
+}
 
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+  line-height: 1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ================= Header ================= */
+header {
+  background-color: var(--bg);
+  padding: 12px 20px;
+  border-bottom: 3px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  width: 72px;
+  height: auto;
+  display: block;
+}
+
+/* Navigation */
+.nav-links ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color .2s, color .2s, transform .12s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--accent);
+  color: #333;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  width: 36px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.burger div{
+  height: 3px;
+  background:#333;
+  border-radius:3px;
+}
+
+/* Site title */
+.site-title {
+  text-align: center;
+  color: var(--red);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+/* Header actions area (buttons) */
+.header-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ================= Main ================= */
 main {
-    padding: 40px 20px; /* Відступи всередині основного блоку */
-    background-color: #fffaf0; /* М’який теплий фон, як у фастфуді */
-    color: #333; /* Основний колір тексту */
-    font-family: Arial, sans-serif; /* Простий сучасний шрифт */
-    line-height: 1.6; /* Збільшена висота рядка для зручності читання */
-  }
-  
-  /* Вирівнюємо кожен блок у main */
-  main div {
-    margin-bottom: 40px; /* Відступ між секціями */
-    background: #fff; /* Білий фон для контрасту */
-    border: 2px solid #f2c94c; /* Жовта рамка — у стилі бренду */
-    border-radius: 12px; /* Округлені кути */
-    padding: 20px; /* Відступи всередині блоку */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Легка тінь для об’єму */
-  }
-  
-  /* Заголовки різного рівня */
-  main h2, main h3, main h4, main h5 {
-    color: #e63946; /* Червоний — основний акцент кольору */
-    margin-bottom: 10px; /* Відступ під заголовком */
-  }
-  
-  /* Текст абзаців */
-  main p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  /* Список переваг */
-  ol {
-    padding-left: 20px; /* Відступ для списку */
-  }
-  
-  ol li {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #d62828; /* Теплий червоний для маркерів */
-  }
-  
-  /* Таблиця  */
-  table {
-    width: 100%; /* Таблиця на всю ширину блоку */
-    border-collapse: collapse; /* Об’єднуємо межі */
-    margin-top: 10px;
-  }
-  
-  th, td {
-    border: 2px solid #f2c94c; /* Тонка рамка у фірмовому кольорі */
-    padding: 10px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2c94c; /* Жовтий фон для заголовків */
-    color: #333;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #fff8dc; /* Світлий колір для парних рядків */
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff7e6;
-    color: #d62828;
-    font-weight: bold;
-    border-top: 2px solid #f2c94c;
-  }
-  
-  /* Посилання на сторінку опису */
-  /*
-  a {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
-    color: #e63946;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  a:hover {
-    color: #333;
-    text-decoration: underline;
-  }
-  */
+  padding: 28px 20px;
+}
+
+/* ================= Index Page ================= */
+.info-box {
+  background: #fffbea;
+  border: 2px solid #f6d56f;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-box h2,
+.info-box h3 {
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 0.96rem;
+}
+
+.info-box ol {
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.info-box ol li {
+  margin: 6px 0;
+}
+
+.offer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+}
+
+.offer-table th {
+  background: #f2c94c;
+  color: #333;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid #f1d76e;
+}
+
+.offer-table td {
+  padding: 10px;
+  border: 1px solid #f1d76e;
+  color: #444;
+}
+
+.offer-table tr:nth-child(even) td {
+  background: #fffdf2;
+}
+
+/* ================= Categories ================= */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 26px;
+  flex-wrap: wrap;
+}
+.category-btn {
+  background: var(--accent);
+  color: #222;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s, background .12s;
+}
+.category-btn:hover { transform: translateY(-2px); background: var(--accent-dark); color:#fff }
+
+/* ================= Rations grid & cards ================= */
+.section-title {
+  text-align: center;
+  color: var(--red);
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.rations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px 40px;
+}
+
+/* Card */
+.ration-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+  overflow: hidden;
+  box-shadow: 0 6px 20px var(--card-shadow);
+  transition: transform .22s, box-shadow .22s;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 12px;
+}
+.ration-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.12) }
+
+.ration-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.ration-card h3 {
+  color: var(--accent-dark);
+  font-size: 1.1rem;
+  margin: 12px 16px 4px;
+}
+.ration-card .price {
+  color: #444;
+  font-weight: 700;
+  margin: 0 16px 8px;
+  font-size: .98rem;
+}
+
+/* Опис (скритий за замовчуванням) */
+.ration-card .desc {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 16px;
+  transition: max-height .36s ease, margin-top .36s ease;
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.ration-card.open .desc {
+  margin-top: 12px;
+  max-height: 600px;
+}
+
+/* Контейнери кнопок у картці */
+.card-controls {
+  margin-top: 12px;
+  margin-left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* ================= Admin Buttons ================= */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #222;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s, transform .08s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.admin-btn:hover { background: var(--accent-dark); color: #fff; transform: translateY(-2px) }
+
+.logout-btn {
+  background: #d62828;
+  color: #fff;
+}
+.logout-btn:hover { background: #a51616 }
+
+#addRationBtn { margin-right: 8px; }
+
+/* ================= Footer ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background: var(--bg);
+  color: var(--red);
+  font-weight: 700;
+  border-top: 3px solid var(--accent);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px) {
+  .navbar { padding: 0 6px }
+  .burger { display: flex }
+  .nav-links ul { display: none }
+  .nav-links.active ul { display: flex; flex-direction: column; background: var(--bg); position: absolute; right: 12px; top: 64px; padding: 12px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.1)}
+  .site-title { font-size: 1.6rem }
+  .ration-card img { height: 150px }
+}
